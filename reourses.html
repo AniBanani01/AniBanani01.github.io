@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Ресурси</title>
+</head>
+<body>      
+<div class="navbar">
+    <a href="index.html">Начало</a>
+    <a href="#">Ресурси</a>
+    <a href="teams.html">Екипни проекти</a></li>
+    <a href="contacts.html">Контакти</a></li>
+  </div>
+
+  <div class="home">
+    <video autoplay muted loop>
+        <source src="video.mp4" type="video/mp4"  />
+      </video>
+      <div class="overlay1"></div>
+    <div class="home-content">
+            <button  onclick="openDirectory('Учебник')">Учебник</button>
+            <button  onclick="openDirectory('Примерни проекти')">Примерни проекти</button>
+            <button  onclick="openDirectory('Презентации')">Презентации</button>
+            <div id="Учебник" class="name" style="display:none">
+              <article>Линк за <a href="https://www.facebook.com/groups/529557508936516/posts/539969621228638/">учебника</a>, по който да се готвим за сесия. Успех на всички! </article>
+            </div>
+            
+            <div id="Презентации" class="name" style="display:none" >
+                <article> <ul><a href="https://www.facebook.com/groups/529557508936516/posts/540018407890426/"> Формиране и функциониране на съвременната икономическа система - 1 част</a></ul>
+                <ul><a href="https://www.facebook.com/groups/529557508936516/posts/545571004001833/">Формиране и функциониране на съвременната икономическа система - 2 част</a> </ul>
+                <ul><a href="https://www.facebook.com/groups/529557508936516/posts/550640333494900/">Мястото на маркетинга в нашия живот 1</a></ul>
+                <ul><a href="https://www.facebook.com/groups/529557508936516/posts/558149486077318/">Мястото на маркетинга в нашия живот 2</a></ul>
+                <ul><a href="https://www.facebook.com/mhitov/videos/2357149604456136?idorvanity=529557508936516">Магията на пазара-Маркетинг</a></ul>
+                <ul><a href="https://www.facebook.com/mhitov/videos/624214459403288?idorvanity=529557508936516">Магията на пазара-Маркетинг(част 1)</a></ul>
+                <ul><a href="https://www.facebook.com/mhitov/videos/1415132048895502?idorvanity=529557508936516">Магията на пазара-Маркетинг(част 2)</a></ul>
+                <ul><a href="https://www.facebook.com/mhitov/videos/1484026598674638?idorvanity=529557508936516">Бизнес планове (част 1)</a></ul>
+                <ul><a href="https://www.facebook.com/mhitov/videos/693053032147986?idorvanity=529557508936516">Бизнес планове (част 2)</a></ul>
+                <ul><a href="https://www.facebook.com/mhitov/videos/1233765460510791?idorvanity=529557508936516">Бизнес планове (част 3)</a></ul>
+                <ul><a href="https://www.facebook.com/mhitov/videos/678464870425484?idorvanity=529557508936516">Бизнес планове (част 4)</a></ul></article>
+               
+            </div>
+            
+            <div id="Примерни проекти" class="name" style="display:none" >
+                 <div class="w3-content w3-display-container">
+                     <iframe class="mySlides" width="560" height="315" src="https://www.youtube.com/embed/PEMoGDqR8Rs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                     <iframe class="mySlides" width="560" height="315" src="https://www.youtube.com/embed/0wWaXkoEB_g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                     <iframe class="mySlides" width="560" height="315" src="https://www.youtube.com/embed/owDfuHThdRA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                     <iframe class="mySlides" width="560" height="315" src="https://www.youtube.com/embed/aD0EXgmFluE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+     
+       <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+       <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+            </div>
+</div>
+
+</div>
+</div>
+<script>
+      function openDirectory(name) {
+        let  i;
+        let  x = document.getElementsByClassName("name");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        document.getElementById(name).style.display = "block";
+    }
+    var slideIndex = 1;
+    showDivs(slideIndex);
+    
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+    
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      x[slideIndex-1].style.display = "block";  
+    }
+    </script>
+</body>
+</html>
