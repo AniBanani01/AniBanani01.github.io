@@ -166,6 +166,7 @@
   div.gallery  a iframe {
     width: 100%;
     height: auto;
+    display: inline-block;
   }
   
   div.desc {
@@ -206,16 +207,15 @@
       height: 100%;
       position: absolute;
     }
-    /* .home-content div {
-     width: 100%;
-     display: block;
-    } */
 
-    .new a {
-      
-      display: block;
+    .new  a{
+      text-align: center;
+      display: inline-block;
     }
 
+    .new  {
+      text-align: center;
+    }
     .overlay div {
       height: 100%;
       width: 100%;
